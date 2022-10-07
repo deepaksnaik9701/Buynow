@@ -1,0 +1,21 @@
+<div class="container mt-3">
+    <div class="row">
+         <div class="col-lg-6" *ngIf="menuData">
+            <a routerLink="../../menu" class="btn btn-sm btn-dark mb-3"><i class="bi bi-arrow-left">Back</i></a>
+            <img src="{{menuData[0].foodimg}}"width="100%" />
+            <h1 class="mt-2">{{menuData[0].foodname}}</h1>
+            <p>{{menuData[0].foodDetails}}</p>
+            <span>{{menuData[0].foodPrice|currency:'INR'}}</span>
+         </div>
+         <div class="col-lg-6">
+            <h1 class="mt-4 fw-bold"> Enter your Details</h1>
+            <form action="">
+          <input type="text" class="form-control mt-2" placeholder="Enter your Name">
+          <input type="text" class="form-control mt-2" placeholder="Enter your mobile number">
+          <textarea name="text" id="" cols="30" rows="5" class="form-control mt-2"  placeholder="Enter Your Address"></textarea>
+          <button class="btn btn-success mt-2 mb-2" >Order now</button>
+
+            </form>
+         </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.navbar-expand-sm .navbar-nav .nav-link:hover{
+    color:black;
+    font-size: larger; 
+    font-style: bold;
+    text-decoration: underline;
+} 
+.navbar-expand-sm .navbar-collapse{
+     justify-content: end;
+}
+.navbar-brand{
+     color:rgb(180, 180, 180);
+     font-size: 1rem;
+     font-weight: 800;
+}

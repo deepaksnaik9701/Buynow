@@ -1,0 +1,46 @@
+<div class="main"> 
+    <div class="content">
+    <h1 class="mb-4"> Fresh  Cooked Food<br>At Your Door</h1> 
+    <button type="button" class="btn btn-success" routerLink="menu">ORDER NOW<i class="bi bi-arrow-right"></i></button>
+  </div>
+</div>
+<div class="conatiner mt-4 mb-4 ">
+    <h1 class="text-center fw-bold">  To Get A <span style="color:rgba(68, 71, 1, 0.978);"> Fresh Food </span></h1>
+    <div class="row mt-4">
+        <div class="col-lg-4">
+            <div class="stepbox">
+                <h1>1</h1>
+                <p>select food</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="stepbox">
+                <h1>2</h1>
+                <p>fill the details </p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="stepbox">
+                <h1>3</h1>
+                <p>Your order deliverd in minute </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- foodbox allignment  -->
+<div class="container mt-4 mb-4">
+    <h1  class="text-center fw-bold"> Customers  <span style="color:rgba(36, 1, 71, 0.978);">Favorite Food </span> </h1>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let fd of foodData;index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{ fd.foodimg}}"/>
+                <h1 class="mt-2 fw-bold">{{fd.foodname}}</h1>
+                <span>{{fd.foodPrice | currency:'INR'}}</span>
+            </div>
+        </div>
+
+    </div>
+</div> 
+<div class="d-grid gap-2 d-md-flex justify-content-md-center mb-3">
+<button type="button " class="btn btn-info" routerLink="menu"> View more <i class="bi bi-arrow-right"></i></button>
+</div>
